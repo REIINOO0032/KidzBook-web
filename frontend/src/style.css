@@ -1,0 +1,89 @@
+/* 温柔棕米色主题配色 - 适配你整个绘本网站 */
+:root {
+  --bg-page: #EAE7DD;        /* 页面背景（你要的米色） */
+  --bg-card: #FFFFFF;        /* 卡片白色 */
+  --color-main: #99775C;     /* 主色（温暖棕） */
+  --color-sub: #B8A08B;      /* 按钮禁用/浅棕 */
+  --color-hover: #8A6A4F;    /* 按钮 hover 深一点 */
+  --border-color: #D9D4C9;   /* 边框浅米色 */
+  --text-dark: #4A3A2F;      /* 文字深棕 */
+  --text-light: #7A6A5F;     /* 文字浅棕 */
+}
+
+/* 全局重置 + 背景 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+  font-family: "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+}
+
+/* 按钮全局样式 */
+button {
+  background-color: var(--color-main);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: var(--color-hover);
+}
+
+button:disabled {
+  background-color: var(--color-sub);
+  cursor: not-allowed;
+}
+
+/* 输入框 / 文本域 */
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text-dark);
+  font-size: 15px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-main);
+}
+
+/* 卡片样式（所有页面统一） */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* 标题文字 */
+h1, h2, h3, h4 {
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+p, span {
+  color: var(--text-light);
+}
+
+/* 布局容器 */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
